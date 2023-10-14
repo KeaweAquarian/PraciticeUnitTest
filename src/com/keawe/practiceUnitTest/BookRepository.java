@@ -6,5 +6,5 @@ import java.util.Map;
 public interface BookRepository {
     void save(Book book);
 
-    Map<Integer, Book> allBooks();
+    Collection<Book> allBooks();
 }

@@ -13,7 +13,7 @@ public class FakeBookRepository implements BookRepository {
     }
 
     @Override
-    public Map<Integer, Book> allBooks() {
-        return map;
+    public Collection<Book> allBooks() {
+        return map.values();
     }
 }
