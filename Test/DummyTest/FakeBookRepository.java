@@ -1,3 +1,5 @@
+package DummyTest;
+
 import com.keawe.practiceUnitTest.Book;
 import com.keawe.practiceUnitTest.BookRepository;
 

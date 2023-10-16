@@ -1,15 +1,19 @@
+package DummyTest;
+
 import com.keawe.practiceUnitTest.Book;
 import com.keawe.practiceUnitTest.BookRepository;
 import com.keawe.practiceUnitTest.BookService;
+import com.keawe.practiceUnitTest.EmailService;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BookServiceTest {
     BookRepository fakeBookRepository = new FakeBookRepository();
-    BookService bookService = new BookService(fakeBookRepository);
+    EmailService dummyEmailService = new DummyEmailService();
+    BookService bookService = new BookService(fakeBookRepository, dummyEmailService);
 
     Book book1 = new Book(1, "biking", LocalDate.now());
     Book book2 = new Book(2, "biking2", LocalDate.now());
