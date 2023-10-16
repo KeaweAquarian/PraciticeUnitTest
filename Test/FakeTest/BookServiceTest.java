@@ -12,9 +12,11 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookServiceTest {
+    ///////
     BookRepository fakeBookRepository = new FakeBookRepository();
 
     EmailService emailService = new DummyEmailService();
+    /////
 
     BookService bookService = new BookService(fakeBookRepository, emailService);
 
